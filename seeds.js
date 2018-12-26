@@ -1,7 +1,7 @@
-const Campground = require("./models/campground");
-const Comment   = require("./models/comment");
+const Campground 	= require("./models/campground");
+const Comment   	= require("./models/comment");
 
-const data = [
+const sampleCamp = [
 	{
 		name: "Cloud's Rest", 
 		image: "https://farm4.staticflickr.com/3795/10131087094_c1c0a1c859.jpg",
@@ -19,36 +19,34 @@ const data = [
 	}
 ];
 
-function seedDB(){
+function seedDB() {
   //Remove all campgrounds
 	Campground.remove({}, function(err){
-		//remove existing campgrounds
-		if(err) {
-			console.log(err);
-		}
+		if(err) console.log(err);
 		console.log("removed campgrounds!");
 		
 		//add a few campgrounds
-		data.forEach(function(seed){
+		sampleCamp.forEach(function(seed){
 			Campground.create(seed, function(err, campground){
 				if (err) {
-						console.log(err)
+					console.log(err);
 				} else {
-					console.log("added a campground");
+					console.log("added a sample campground");
 					//create a comment
 					Comment.create(
 						{
-							text: "This place is great, but I wish there was internet",
-							author: "Homer"
-						}, function(err, comment){
+							text: "Beautify view, but the night is cold.",
+							author: "Test123"
+						}, 
+						function(err, comment){
 							if(err) {
 								console.log(err);
 							} else {
 								campground.comments.push(comment);
 								campground.save();
-								console.log("Created new comment");
+								console.log("Created new comment for testing purpose");
 							}
-						});
+					});
 				}
 			});
 		});

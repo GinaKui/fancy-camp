@@ -1,15 +1,24 @@
 .thumbnail img {
-    width: 100%;
+  width: 100%;
 }
 
 .thumbnail {
-    padding: 0;
+  padding: 0;
 }
 
 .thumbnail .caption-full {
-    padding: 9px;
+  padding: 9px;
 }
 
 #delete-form {
-    display: inline;
+  display: inline;
+}
+
+.landing-page {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
