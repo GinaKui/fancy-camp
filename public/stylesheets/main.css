@@ -1,13 +1,15 @@
-.thumbnail img {
-  width: 100%;
+:root {
+  --background-light-grey: #bbb;
 }
 
 .thumbnail {
   padding: 0;
 }
 
-.thumbnail .caption-full {
-  padding: 9px;
+.thumbnail .img-responsive {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 #delete-form {
@@ -21,4 +23,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.page-footer {
+  background: var(--background-light-grey);
+  height: 80px;
+}
+
+.page-footer::before {
+  content: '';
+  display: block;
+  height: 40%;
 }

@@ -1,5 +1,6 @@
 const express = require("express"),
 			router  = express.Router({ mergeParams: true }),
+			moment = require("moment"),
 			Campground = require("../models/campground"),
 			Comment = require("../models/comment"),
 			middleware = require("../middleware");
