@@ -17,8 +17,9 @@
 }
 
 .landing-page {
-  height: 80vh;
+  height: 90vh;
   width: 100%;
+  background: center url('../img/ihor-malytskyi-567429-unsplash.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
