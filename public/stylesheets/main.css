@@ -17,8 +17,9 @@
 }
 
 .landing-page {
-  min-height: 90vh;
+  min-height: 95vh;
   width: 100%;
+  margin-top: -20px;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3)), url('../img/ihor-malytskyi-567429-unsplash.jpg');
   background-size: cover;
   background-position: center;
@@ -28,6 +29,9 @@
   align-items: center;
 }
 
+.landing-page--header {
+  font-size: 7rem;
+}
 
 .page-footer {
   background: var(--background-light-grey);
