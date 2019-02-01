@@ -27,6 +27,13 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 			username: req.user.username
 		}
 	};
+
+	// const newCampground = { ...req.body.campground,
+	// 	author: {
+	// 		id: req.user._id,
+	// 		username: req.user.username
+	// 	}
+	// };
 	// Create a new campground and save to DB
 	Campground.create(newCampground, function(err, newlyCreated){
 		if (err) {
